@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Software Engineering Course Assignment One v1.1">
+        <meta name="author" content="Kyle Chou, StudentId=10620580">
+        <title>Theatre Table</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+        <style>body{margin:0;}</style>
+        
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Ticket System</h1>
+                </div>
+            </div>
+            <nav>
+                <ul id="theMovNav">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="Theatre.html" title="Jump to Theater Tabl">Theaters</a></li>
+                    <li><a href="Movies.html" title="Jump to Movie List">Movies</a></li>
+                    <li><a href="Add.html" title="coming soon">ADD</a></li>
+                </ul>
+            </nav>
+        </header>
+<!-- Start Table for Theatre# and showing -->
+        <article>
+        <Section id="TheaterList">
+            <div id="tableSetup">
+                <table syle="width:100%">
+                <caption>Theatre Table</caption>
+                <tr id="fieldName">
+                    <th id="fieldName">Theatre#</th>
+                    <th id="fieldName">10AM</th>
+                    <th id="fieldName">12PM</th>
+                    <th id="fieldName">2PM</th>
+                    <th id="fieldName">4PM</th>
+                    <th id="fieldName">6PM</th>
+                </tr>
+                <tr>
+                    <th id="fieldName">Number 1</th>
+                    <th>Blade Runner-Seats: <span id="th1-1">60</span></th>
+                    <th>Jurassic Park 5-Seats: <span id="th1-2">70</span></th>
+                    <th>Star War-Seats: <span id="th1-3">70</span></th>
+                    <th>Terminator-Seats: <span id="th1-4">60</span></th>
+                    <th>Wonder Woman-Seats: <span id="th1-5">80</span></th>
+                </tr>               
+                <tr>
+                    <th id="fieldName">Number 2</th>
+                    <th>Venom-Seats: <span id="th2-1">60</span></th>
+                    <th>Star War-Seats: <span id="th2-2">70</span></th>
+                    <th>Jurassic Park 5-Seats: <span id="th2-3">70</span></th>
+                    <th>Wonder Woman-Seats: <span id="th2-4">60</span></th>
+                    <th>Terminator-Seats: <span id="th2-5">80</span></th>
+                </tr>
+                <tr>
+                    <th id="fieldName">Number 3</th>
+                    <th>Star War-Seats: <span id="th3-1">60</span></th>
+                    <th>Jurrassic Park-Seats: <span id="th3-2">70</span></th>
+                    <th>Wonder Woman-Seats: <span id="th3-3">70</span></th>
+                    <th>Terminator-Seats: <span id="th3-4">60</span></th>
+                    <th>Blade RUnner-Seats: <span id="th3-5">80</span></th>
+                </tr>
+                <tr>
+                    <th id="fieldName">Number 4</th>
+                    <th>Jurassic Park 5-Seats: <span id="th4-1">60</span></th>
+                    <th>Wonder Woman-Seats: <span id="th4-2">70</span></th>
+                    <th>Terminator-Seats: <span id="th4-3">70</span></th>
+                    <th>Blade Runner-Seats: <span id="th4-4">60</span></th>
+                    <th>Venom-Seats: <span id="th4-5">80</span></th>
+                </tr>
+                <tr>
+                    <th id="fieldName">Number 5</th>
+                    <th> Wonder Woman-Seats: <span id="th5-1">60</span></th>
+                    <th>Terminator-Seats: <span id="th5-2">70</span></th>
+                    <th>Blade Runner-Seats: <span id="th5-3">70</span></th>
+                    <th>Venom-Seats: <span id="th5-4">60</span></th>
+                    <th>Star War-Seats: <span id="th5-5">80</span></th>
+                </tr>
+                <tr>
+                    <th id="fieldName">Number 6</th>
+                    <th>Terminator-Seats: <span id="th6-1">60</span></th>
+                    <th>Blade Runner-Seats: <span id="th6-2">70</span></th>
+                    <th>Venom-Seats: <span id="th6-3">70</span></th>
+                    <th>Star War-Seats: <span id="th6-4">60</span></th>
+                    <th>Jurassic Park 5-Seats: <span id="th6-5">80</span></th>
+                </tr>
+            </table>
+                <div>
+                    <ul id="TheatreInput">
+                        <li>Enter Theatre Number: <li>
+                        <li><input id="inputThea" type="number" placeholder="Enter Theatre Number.."></li>
+                        <li>Enter Showing Time(1-10AM, 2-12PM, 3-2PM, 4-4PM, 5-6PM): </li>
+                        <li><input id="show" type="number" placeholder="Enter Showing Time..."></li>
+                    </ul>
+                </div>
+                <div id="buttonLine">
+                    <button id="submit" type="button"  onclick="theaInput()">Submit</button>
+                    <script>
+                        var maxSeat = [
+                            [60, 70, 70, 60, 80],//row1
+                            [60, 70, 70, 60, 80],
+                            [60, 70, 70, 60, 80],
+                            [60, 70, 70, 60, 80],
+                            [60, 70, 70, 60, 80],
+                            [60, 70, 70, 60, 80]//row6
+                        ];
+                        function theaInput(){
+                            var thea = document.getElementById("inputThea").value;
+                            var time = document.getElementById("show").value;
+                            maxSeat[thea][time]--;
+                            var newNum = maxSeat[thea][time];
+                            var id = "th" + thea + "-" + time;
+                            if(newNum <= 0)
+                                {
+                                    document.getElementById(id).innerHTML = "Sold Out!"
+                                }
+                            else
+                                {
+                                    document.getElementById(id).innerHTML = newNum;
+                                    //print ticket;
+                                }
+                        }
+                    </script>
+                </div>
+            </div>
+        </Section>
+        </article>
+        <footer>
+        <Section>
+                <p>Software Engineering 2018 Assignment One.</p>
+        </Section>
+        </footer>
+        </body>
+        <script type="txt/javascript" src="script.js"></script>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Software Engineering Course Assignment One v1.1">
+        <meta name="author" content="Kyle Chou, StudentId=10620580">
+        <title>Add Movie</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+        <style>body{margin:0;}</style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div>
+                    <h1>Ticket System</h1>
+                </div>
+            </div>
+            <nav>
+                <ul id="theMovNav">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="Theatre.html" title="Jump to Theater Tabl">Theaters</a></li>
+                    <li><a href="Movies.html" title="Jump to Movie List">Movies</a></li>
+                    <li><a href="Add.html" title="coming soon">ADD</a></li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <ul id="movieInput">
+                <li>Movie Titile:</li>
+                <li><input id="title" type="text" placeholder="Enter Movie Title..."></li>
+                <li>Actors:</li>
+                <li><input id="actor" type="text" placeholder="Enter Actor Names..."></li>
+                <li>Showing:</li>
+                <li><input id="time" type="text" placeholder="Enter Showing Time..."></li>
+                <li>Theatre Number:</li>
+                <li><input id="theaNum" type="text" placeholder="Enter Theatre #..."></li>
+            </ul>
+            <div id="buttonLine">
+            <button id="submit" type="button" onclick="add()">Submit</button>
+                <script>
+                    //show addition on the bottom for now
+                    function add(){
+                        var title = document.getElementById("title").value;
+                        var actor = document.getElementById("actor").value;
+                        var time = document.getElementById("time").value;
+                        var theaNum = document.getElementById("theaNum").value;
+                        var div = document.createElement("div");
+                        var content = "Title: " + title + ". Actors: " + actor + ". Time: " + time + ". Theatre Number: " + theaNum + ".";
+                        div.textContent = content;
+                        document.body.appendChild(div);
+                    }
+                </script>
+            </div>
+        </article>
+        <footer>
+            <Section>
+             <p>Software Engineering 2018 Assignment One.</p>
+            </Section>
+        </footer>
+        <script type="txt/javascript" src="../js/script.js"></script>
+    </body>
+</html>
