@@ -1,0 +1,187 @@
+body{
+    margin 0;
+    padding 0;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    background-color:#FFE2C2;
+    
+}
+.container{
+    width: 80%;
+    margin:0;
+    overflow:hidden;
+}
+.box{
+    list-style: none;
+    font-size: 60px;
+    text-align: center;
+    margin-top:50px;
+    border: 5px solid #780116;
+    width:300px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.box:hover{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.box a{
+    text-decoration: none;
+    color: #780116;
+}
+/*Header design*/
+header{
+    background: #E6AA68;
+    color: #780116;
+    padding:30px;
+    margin:0;
+    min-height:70px;
+    border-bottom:#DB7C26 15px solid;
+}
+header h1{
+    float:left;
+    font-size: 40px;
+}
+header nav{
+    float:right;
+    margin-top:-20px;
+    margin-bottom: 10px;
+}
+header ul{
+    list-style-type: none;
+}
+header li{
+    display:inline-block;
+    vertical-align: top;
+    padding-left:10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+header a{
+    text-decoration: none;
+    color:#780116;
+}
+/*Section Design*/
+/*Table Design*/
+Section caption{
+    color:#780116;
+    font-size:28px;
+    padding-left:auto;
+    padding right:auto;
+    text-align: inherit;
+    font-weight: bold;
+}
+/*Table Cell Format*/
+Section table, th, tr{
+    border: 2px solid #780116;
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/*Center Table */
+Section table {
+    margin-top:30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Setting Column and Row names*/
+Section #fieldName{
+    font-size:20px; 
+    color:#DB7C26;
+}
+Section th{
+    font-size:20px; 
+    color:#780116;
+}
+/*Setting for data within cells*/
+Section h2{
+    margin-left:20px;
+    color:#780116;
+    font-size:28px;
+}
+Section button{
+    font-size:17px;
+    color:#A0621F
+}
+ul {
+    list-style-type: none;
+}
+/*Setting up Movie List*/
+Section img{
+    float: left;
+    width: auto;
+    height: 140px;
+}
+Section div.movie{
+    float:left;
+    width:80%;
+    text-align: center;
+    margin-top:-5px;
+    margin-left:auto;
+    margin-left:50px;
+    border-top: 5px solid #780116;
+    border-bottom: 5px solid #780116
+}
+Section a{
+    text-decoration: none;
+    color:
+}
+Section h4{
+    font-size:40px;
+    margin-top:5px;
+    margin-bottom: 8px;
+    color: #DB7C26;
+}
+footer{
+    clear:both;
+    font-size:20px;
+    margin-top:10px;
+    margin-left: 40px;
+}
+#movieInput{
+    list-style-type: none;
+    font-size:30px;
+    Color: #780116;
+}
+#movieInput li{
+    padding-bottom: 5px; 
+}
+input{
+    width:80%;
+    height:40px;
+    margin-left:40px;
+    font-size:30px;
+    padding-left:10px;
+}
+button#submit{
+    width:200px;
+    height:100px;
+    float:left;
+    margin-left:3%;
+    margin-right: 70%;
+    font-size:40px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+#buttonLine{
+    border-top: 10px solid #DB7C26
+}
+#TheatreInput{
+    list-style-type: none;
+    font-size:30px;
+    Color: #780116;
+}
+#TheatreInput li{
+    padding-bottom: 5px; 
+}
+aside{
+    float: right;
+    margin-right: 50px;
+}
+aside h5{
+    font-size: 50px;
+    text-align: left;
+    margin-top: 0;
+}
